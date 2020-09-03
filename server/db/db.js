@@ -38,8 +38,18 @@ function getCuisines (city_id) {
     .catch(err => err)
 }
 
+function search (city_id, category_id) {
+  return request
+  .get(apiUrl + `/search?entity_type=city&entity_id=${city_id}&category=${category_id}`)
+  .set('user-key', credentials)
+  .set('Accept', 'application/json')
+  .then(results =>  results.body)
+  .catch(err => err)
+}
+
 module.exports = {
   getCategories,
   getCity,
-  getCuisines
+  getCuisines,
+  search
 }
