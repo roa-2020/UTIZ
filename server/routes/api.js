@@ -65,4 +65,17 @@ router.get('/cuisines/:city_id', (req, res) => {
     })
 })
 
+router.get('/search/:city_id/:category', (req, res) => {
+  const city = req.params.city_id
+  const category = req.params.category
+  db.search(city, category)
+    .then(results => {
+      res.json(results)
+    })
+    .catch(err => {
+      console.error(err)
+      res.status(500).json({ message: 'Could not get search results.' })
+    })
+})
+
 module.exports = router
