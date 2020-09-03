@@ -12,6 +12,23 @@ function getCategories () {
     .catch(err => err)
 }
 
+function getCity (city_name) {
+  return request
+    .get(apiUrl + '/cities?q=' + city_name)
+    .set('user-key', credentials)
+    .set('Accept', 'application/json')
+    .then(results =>  {
+      const filteredResults = []
+      results.body.location_suggestions.map(city => {
+        if (city.country_id === nzId){
+          filteredResults.push(city)
+        }
+      })
+      return filteredResults
+    })
+    .catch(err => err)
+}
+
 function getCuisines (city_id) {
   return request
     .get(apiUrl + '/cuisines?city_id=' + city_id)
@@ -23,5 +40,6 @@ function getCuisines (city_id) {
 
 module.exports = {
   getCategories,
+  getCity,
   getCuisines
 }
