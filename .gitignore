@@ -61,7 +61,7 @@ typings/
 .next
 
 # Webpack bundles
-bundle.*
+# bundle.*
 
 # Development databases
 dev.sqlite3
