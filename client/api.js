@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-const baseURL = '/api/v1'
+const baseURL = '/api/v1/'
 
 export function getCategories() {
     return request.get(baseURL + 'categories')
