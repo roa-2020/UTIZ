@@ -32,7 +32,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <section className="section">
+        <div className="container">
           <Header />
           <div className="columns">
             {/* <Sidebar selectCategory={this.selectCategory} />
@@ -40,7 +40,7 @@ class App extends React.Component {
             <Sidebar selectCategory={this.selectCategory} />
             <Container restaurants={this.state.restaurants} category={this.state.categoryName}/>
           </div>
-        </section>
+        </div>
       </Router>
     );
   }
