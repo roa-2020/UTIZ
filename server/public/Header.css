@@ -1,10 +1,13 @@
 .header {
   display: flex;
   justify-content: space-evenly;
+  background-color: #BA3335;
+  margin-bottom: 3rem;
 }
 
-.nav-list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+.header h1 {
+  color: rgb(244, 240, 240);
 }
+
+
+
