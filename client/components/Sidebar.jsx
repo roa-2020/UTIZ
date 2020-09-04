@@ -24,8 +24,8 @@ class Sidebar extends React.Component {
    
   render(){
     return (
-      <div className='sidebar container column'>
-        <p className="subtitle">sidebar</p>
+      <div className='sidebar column'>
+        <p className="subtitle">Categories</p>
         <ul className="cat-list">
           {this.state.categories.map((category, i) => {
             return (

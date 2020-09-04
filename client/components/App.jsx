@@ -35,11 +35,11 @@ class App extends React.Component {
         <section className="section">
           <Header />
           <div className="columns">
+            {/* <Sidebar selectCategory={this.selectCategory} />
+            <Container restaurants={this.state.restaurants} /> */}
             <Sidebar selectCategory={this.selectCategory} />
-            <Container restaurants={this.state.restaurants} />
+            <Container restaurants={this.state.restaurants} category={this.state.categoryName}/>
           </div>
-          <Sidebar selectCategory={this.selectCategory} />
-          <Container restaurants={this.state.restaurants} category={this.state.categoryName}/>
         </section>
       </Router>
     );

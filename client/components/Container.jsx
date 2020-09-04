@@ -5,7 +5,7 @@ const Container = (props) => {
   console.log(props.restaurants);
   const rest = props.restaurants;
   return (
-    <div className="column is-three-fifths">
+    <div className="column is-two-thirds">
       <h1 className="title">{props.category}</h1>
 
       {rest.map((r, i) => {

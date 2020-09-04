@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className='header container'>
       <h1 className="subtitle">You Say Tomato I Say Zomato</h1>
-      <nav>
+      {/* <nav>
         <ul className="nav-list">
           <li className="nav-list-item">
               Cusine
@@ -16,7 +16,7 @@ const Header = () => {
               Search
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </div>
     
   )
