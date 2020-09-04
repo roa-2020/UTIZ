@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar";
 import Container from "./Container";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { searchCategory } from "../api";
-import SingleListItem from "../SingleListItem";
+import SingleListItem from "./SingleListItem";
 
 class App extends React.Component {
   state = {
@@ -44,7 +44,7 @@ class App extends React.Component {
               category={this.state.categoryName}
             />
           }} />
-          <Route path="/restaurant/:id" component={SingleListItem} /> //props.match.params.id
+          <Route path="/restaurant/:id" component={SingleListItem} />
           </div>
         </div>
       </Router>
