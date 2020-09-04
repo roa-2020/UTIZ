@@ -35,7 +35,29 @@ class SingleListItem extends React.Component {
   render() {
     return (
       <>
-           <h1>{this.state.restaurant.name}</h1>
+      <section className="column is-four-fifths">
+          <div className="hero-body">
+            <div className="container">
+              <h1 className="title">{this.state.restaurant.name}</h1>
+              <h2 className="subtitle">{this.state.restaurant.cuisines}</h2>
+              {console.log('hi', this.state)}
+              
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-content">
+              <p>
+                <strong>
+             
+                </strong>
+              </p>
+              <p>
+                
+              </p>
+              {/* <p>{this.props.description}</p> */}
+            </div>
+          </div>
+        </section>
       </>
     )
   }
