@@ -69,7 +69,7 @@ router.get("/search/:city_id/:category/:count/:offset", (req, res) => {
   const category = req.params.category;
   const count = req.params.count || 20;
   const offset = req.params.offset || 0;
-  db.search(city, category)
+  db.search(city, category, count, offset)
     .then((results) => {
       res.json(results);
     })
