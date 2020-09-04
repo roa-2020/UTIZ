@@ -33,8 +33,9 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <section className="section">
+        <div className="container">
           <Header />
+          <div className="columns">
           <Sidebar selectCategory={this.selectCategory} />
           <Route exact path="/" render={(props) => {
             return <Container 
@@ -44,7 +45,8 @@ class App extends React.Component {
             />
           }} />
           <Route path="/restaurant/:id" component={SingleListItem} /> //props.match.params.id
-        </section>
+          </div>
+        </div>
       </Router>
     );
   }

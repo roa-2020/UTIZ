@@ -1,0 +1,12 @@
+.hero.is-primary {
+  background-color: #BA3335;
+  color: rgb(223, 222, 222);
+}
+
+a {
+  color: rgb(31, 31, 31);
+}
+
+a:hover {
+  color: #BA3335;
+}
