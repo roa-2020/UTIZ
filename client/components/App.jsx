@@ -9,20 +9,23 @@ class App extends React.Component {
   state = {
     categoryID: "",
     restaurants: [],
+    categoryName: ''
   };
 
-  selectCategory = (categoryID) => {
+  componentDidMount(){
+    this.selectCategory(1, 'Delivery')
+  }
+
+  selectCategory = (categoryID, categoryName) => {
     searchCategory(categoryID).then((results) => {
       this.setState(
         {
           restaurants: results.restaurants,
           offset: results.results_start,
           count: results.results_shown,
-        },
-        () => {
-          console.log(this.state);
-        }
-      );
+          categoryName: categoryName,
+          categoryID: categoryID
+        });
     });
   };
 
@@ -32,7 +35,7 @@ class App extends React.Component {
         <section className="section">
           <Header />
           <Sidebar selectCategory={this.selectCategory} />
-          <Container restaurants={this.state.restaurants} />
+          <Container restaurants={this.state.restaurants} category={this.state.categoryName}/>
         </section>
       </Router>
     );

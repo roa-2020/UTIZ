@@ -30,7 +30,7 @@ class Sidebar extends React.Component {
           {this.state.categories.map((category, i) => {
             return (
               <li key={i}>
-                <Link to="#" onClick={()=>{this.props.selectCategory(category.categories.id)}}>
+                <Link to="#" onClick={()=>{this.props.selectCategory(category.categories.id, category.categories.name)}}>
                   {category.categories.name}
                 </Link>
               </li>)

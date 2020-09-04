@@ -7,6 +7,7 @@ const Container = (props) => {
   return (
     <div className="columns is-centered">
       <div className="is-three-fifths">
+        <h1 className="title">{props.category}</h1>
         {rest.map((r, i) => {
           {
             console.log(r.restaurant);
