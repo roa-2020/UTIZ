@@ -38,9 +38,9 @@ function getCuisines (city_id) {
     .catch(err => err)
 }
 
-function search (city_id, category_id) {
+function search (city_id, category_id, count=20, offset=0) {
   return request
-  .get(apiUrl + `/search?entity_type=city&entity_id=${city_id}&category=${category_id}`)
+  .get(apiUrl + `/search?entity_type=city&entity_id=${city_id}&category=${category_id}&start=${offset}&count=${count}`)
   .set('user-key', credentials)
   .set('Accept', 'application/json')
   .then(results =>  results.body)

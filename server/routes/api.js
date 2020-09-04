@@ -65,9 +65,11 @@ router.get('/cuisines/:city_id', (req, res) => {
     })
 })
 
-router.get('/search/:city_id/:category', (req, res) => {
+router.get('/search/:city_id/:category/:count/:offset', (req, res) => {
   const city = req.params.city_id
   const category = req.params.category
+  const count = req.params.count || 20
+  const offset = req.params.offset || 0
   db.search(city, category)
     .then(results => {
       res.json(results)

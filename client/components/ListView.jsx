@@ -19,9 +19,9 @@ class ListView extends React.Component {
                 </strong>
               </p>
               <p>
-                <i>10:30am - 9pm</i>
+                <i>Opening Hours: {this.props.hours}</i>
               </p>
-              <p>We are a burger police, and we like primates.</p>
+              {/* <p>{this.props.description}</p> */}
             </div>
           </div>
         </section>
