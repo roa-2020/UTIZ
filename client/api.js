@@ -18,7 +18,7 @@ export function searchCategory(category_id, city_name = "", count =  20, offset 
     const city_id = getCities(city_name).id
 
     return request.get(baseURL + `search/${city_id}/${category_id}/${count}/${offset}`)
-        .then(response => response)
+        .then(response => response.body)
         .catch(err => err)
 }
 
