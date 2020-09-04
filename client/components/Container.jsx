@@ -5,8 +5,7 @@ const Container = (props) => {
   console.log(props.restaurants);
   const rest = props.restaurants;
   return (
-    <div className="columns is-centered">
-      <div className="is-three-fifths">
+    <div className="column is-three-fifths">
         {rest.map((r, i) => {
           {
             console.log(r.restaurant);
@@ -23,7 +22,6 @@ const Container = (props) => {
             />
           );
         })}
-      </div>
     </div>
   );
 };

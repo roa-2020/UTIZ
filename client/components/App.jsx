@@ -31,8 +31,10 @@ class App extends React.Component {
       <Router>
         <section className="section">
           <Header />
-          <Sidebar selectCategory={this.selectCategory} />
-          <Container restaurants={this.state.restaurants} />
+          <div className="columns">
+            <Sidebar selectCategory={this.selectCategory} />
+            <Container restaurants={this.state.restaurants} />
+          </div>
         </section>
       </Router>
     );
