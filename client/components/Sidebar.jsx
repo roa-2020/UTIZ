@@ -6,7 +6,7 @@ class Sidebar extends React.Component {
     state = {
     categories: [],
   }
-
+  
   componentDidMount(){
     this.getCategoryData()
   }

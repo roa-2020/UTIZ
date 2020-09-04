@@ -7,7 +7,7 @@ const Header = () => {
       <nav>
         <ul className="nav-list">
           <li className="nav-list-item">
-              Cusine
+              Cuisine
           </li>
           <li className="nav-list-item">
               Types
