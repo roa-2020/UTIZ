@@ -2,17 +2,15 @@ import React from "react";
 import ListView from "./ListView";
 
 const Container = (props) => {
-  console.log(props.restaurants);
+  // console.log(props.restaurants);
   const rest = props.restaurants;
   return (
-    <div className="column is-two-thirds">
+    <div className="column is-four-fifths">
       <h1 className="title">{props.category}</h1>
-
       {rest.map((r, i) => {
         {
           console.log(r.restaurant);
         }
-
         return (
           <ListView
             key={i}
