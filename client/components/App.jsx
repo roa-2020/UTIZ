@@ -1,14 +1,16 @@
-import React from 'react'
-import Header from './Header'
+import React from "react";
+import Header from "./Header";
+import Container from "./Container";
 
 const App = () => {
   return (
-    <section className="section">
-       <Header />
+    <>
+      <section className="section">
+        <Header />
+      </section>
+      <Container />
+    </>
+  );
+};
 
-    </section>
-   
-  )
-}
-
-export default App
+export default App;
