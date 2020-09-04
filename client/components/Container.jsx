@@ -3,7 +3,7 @@ import ListView from "./ListView";
 import {Link} from "react-router-dom"
 
 const Container = (props) => {
-  // console.log(props.restaurants);
+  console.log(props.restaurants);
   const rest = props.restaurants;
   return (
     <div className="column is-four-fifths">
@@ -21,6 +21,7 @@ const Container = (props) => {
             address={r.restaurant.location.address}
             cuisine={r.restaurant.cuisines}
             hours={r.restaurant.timings}
+            id={r.restaurant.id}
           />
         );
       })}

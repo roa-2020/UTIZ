@@ -32,7 +32,7 @@ export function searchCategory(
 
 export function singleView(res_id) {
   return request
-    .then(apiUrl + "restaurant/" + res_id)
+    .get(baseURL + "restaurant/" + res_id)
     .then((response) => response.body)
     .catch((err) => err);
 }

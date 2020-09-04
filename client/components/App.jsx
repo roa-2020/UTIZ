@@ -4,6 +4,7 @@ import Sidebar from "./Sidebar";
 import Container from "./Container";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { searchCategory } from "../api";
+import SingleListItem from "./SingleListItem";
 
 class App extends React.Component {
   state = {
@@ -70,11 +71,11 @@ class App extends React.Component {
         <div className="container">
           <Header />
           <div className="columns">
-            {/* <Sidebar selectCategory={this.selectCategory} />
-            <Container restaurants={this.state.restaurants} /> */}
-            <Sidebar selectCategory={this.selectCategory} />
-            <Container
-              restaurants={this.state.restaurants}
+          <Sidebar selectCategory={this.selectCategory} />
+          <Route exact path="/" render={(props) => {
+            return <Container 
+              {...props} 
+              restaurants={this.state.restaurants} 
               category={this.state.categoryName}
               prev={this.prev}
               next={this.next}
@@ -82,6 +83,8 @@ class App extends React.Component {
               current={this.state.offset}
               count={this.state.count}
             />
+          }} />
+          <Route path="/restaurant/:id" component={SingleListItem} />
           </div>
         </div>
       </Router>

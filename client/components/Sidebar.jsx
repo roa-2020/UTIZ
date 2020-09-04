@@ -31,7 +31,7 @@ class Sidebar extends React.Component {
             return (
               <li key={i}>
                 <Link
-                  to="#"
+                  to="/"
                   onClick={() => {
                     this.props.selectCategory(
                       category.categories.id,
